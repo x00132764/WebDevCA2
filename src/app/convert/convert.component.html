@@ -1,3 +1,11 @@
 <p>
-  <button (click)="onConvert()">convert</button>
+    <input #celsius celsius.value='' />
+</p>
+
+<p>
+    <input #farenheit farenheit.value='' />
+</p>
+
+<p>
+  <button (click)="onConvert(celsius.value, farenheit.value)">convert</button>
 </p>
