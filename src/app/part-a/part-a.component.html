@@ -1,3 +1,15 @@
 <p>
-  part-a works!
+    <a [routerLink]="['page2']">Part B</a>
+</p>
+
+<p>
+    <input #celsius celsius.value='' />
+</p>
+
+<p>
+    <input #farenheit farenheit.value='' />
+</p>
+
+<p>
+  <button (click)="onConvert(celsius.value, farenheit.value)">convert</button>
 </p>
