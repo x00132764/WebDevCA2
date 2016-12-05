@@ -14,8 +14,25 @@ export class PartAComponent implements OnInit {
     this.router.navigate(["part-b"])
   }
 
-  onConvert() {
-    
+  onConvert($scope) {
+    $scope.edited = null;
+    $scope.markEdited = function(which) {
+      $scope.edited = which;
+    }
+
+    $scope.$watch('farenheit', function(value) {
+      if ($scope.edited == 'F') {
+        console.log(value+'C -> F');
+        $scope.celsius = (value - 32) * (5.0/9.0);
+      }
+    });
+
+    $scope.$watch('celsius', function(value) {
+      if ($scope.edited == 'C') {
+        console.log(value+'F -> C');
+        $scope.farenheit = (value * (9.0/5.0)) + 32;
+      }
+    });
   }
 
   ngOnInit() {
