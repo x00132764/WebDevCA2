@@ -8,32 +8,29 @@ import { Router } from "@angular/router";
 })
 export class PartAComponent implements OnInit {
 
+  count: number = 0;
+  celsius: number = 0;
+  farenheit: number = 0;
+
   constructor(private router: Router) { }
+
+  
 
   navigate() {
     this.router.navigate(["part-b"])
   }
 
-  onConvert($scope) {
-    $scope.edited = null;
-    $scope.markEdited = function(which) {
-      $scope.edited = which;
-    }
-
-    $scope.$watch('farenheit', function(value) {
-      if ($scope.edited == 'F') {
-        console.log(value+'C -> F');
-        $scope.celsius = (value - 32) * (5.0/9.0);
-      }
-    });
-
-    $scope.$watch('celsius', function(value) {
-      if ($scope.edited == 'C') {
-        console.log(value+'F -> C');
-        $scope.farenheit = (value * (9.0/5.0)) + 32;
-      }
-    });
+  convertC() {
+    this.farenheit = ((this.celsius) - 32) * (5/9);
+    this.count++
   }
+
+  convertF()
+ {
+   this.celsius = ((this.farenheit) * (9 / 5)) + 32;
+   this.count++;
+ }
+
 
   ngOnInit() {
   }

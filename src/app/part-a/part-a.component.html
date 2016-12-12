@@ -3,13 +3,11 @@
 </p>
 
 <p>
-    <input ng-model="celsius" ng-change="markEdited('C')"/> celsius<br/>
+    <input (keyup)="convertC()" id="celsius" type="number"/> {{farenheit}}<br/>
 </p>
 
 <p>
-    <input (onKeyUp)="onConvert()" ng-model="fahrenheit" ng-change="markEdited('F')"/> farenheit<br/>
+    <input (keyup)="convertF()" id="farenheit" type="number"/> {{celsius}}<br/>
 </p>
 
-<p>
-  <button (click)="onConvert(celsius.value, farenheit.value)">convert</button>
-</p>
+<p>number of conversions: </p><p>{{count}}</p>
