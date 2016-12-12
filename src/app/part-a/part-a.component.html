@@ -3,11 +3,11 @@
 </p>
 
 <p>
-    <input (keyup)="convertC()" id="celsius" type="number"/> {{farenheit}}<br/>
+    c to f <input #inputc (keyup)="convertC(inputc.value)" id="celsius" type="number"/> {{farenheit}}<br/>
 </p>
 
 <p>
-    <input (keyup)="convertF()" id="farenheit" type="number"/> {{celsius}}<br/>
+    f to c <input #inputf (keyup)="convertF(inputf.value)" id="farenheit" type="number"/> {{celsius}}<br/>
 </p>
 
 <p>number of conversions: </p><p>{{count}}</p>

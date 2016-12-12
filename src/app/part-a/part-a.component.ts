@@ -20,14 +20,14 @@ export class PartAComponent implements OnInit {
     this.router.navigate(["part-b"])
   }
 
-  convertC() {
-    this.farenheit = ((this.celsius) - 32) * (5/9);
+  convertC(input: number) {
+    this.farenheit = (input * (9 / 5)) + 32;
     this.count++
   }
 
-  convertF()
+  convertF(input: number)
  {
-   this.celsius = ((this.farenheit) * (9 / 5)) + 32;
+   this.celsius = (input - 32) * (5/9);
    this.count++;
  }
 
