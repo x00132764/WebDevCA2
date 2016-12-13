@@ -1,12 +1,12 @@
-<p>BMI calculator</p>
- 
 <p>
    <a [routerLink]="['/']">Part A</a>
 </p>
 
+<p>BMI calculator</p>
+
 <p>enter your weight</p>
 <p>
-    stone <input #inputStone (keyup)="convertFromStone(#inputStone.value)"  id="stone" type="number" placeholder="enter a number" />
+    stone <input #inputStone id="stone" type="number" placeholder="enter a number" />
 </p>
 <p>
     pounds <input #inputLbs  id="pounds" type="number" placeholder="enter a number" />
@@ -27,7 +27,7 @@
 </p>
 
 <p>
-    <button>calculate BMI</button>
+    <button (click)="calcBMI()" >calculate BMI</button>
 </p>
 
 <p>result</p>

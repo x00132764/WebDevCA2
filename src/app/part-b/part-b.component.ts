@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from "@angular/common";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-part-b',
@@ -17,10 +17,16 @@ export class PartBComponent implements OnInit {
   bmi: number = 0;
   range: string = "";
 
-  constructor(private location: Location) { }
+  //constructor(private location: Location) { }
 
-  goBack() {
+  /*goBack() {
     this.location.back();
+  }*/
+
+  constructor(private router: Router) { }
+
+  navigate() {
+    this.router.navigate(["part-b"])
   }
 
   convertFromKG(input: number) {
