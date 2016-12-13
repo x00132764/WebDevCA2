@@ -8,13 +8,13 @@ import { Router } from "@angular/router";
 })
 export class PartBComponent implements OnInit {
 
-  kilograms: number = 0;
-  stone: number = 0;
-  pounds: number = 0;
-  feet: number = 0;
-  metres: number = 0;
-  inches: number = 0;
-  bmi: number = 0;
+  kilograms: number = null;
+  stone: number = null;
+  pounds: number = null;
+  feet: number = null;
+  metres: number = null;
+  inches: number = null;
+  bmi: number = null;
   range: string = "";
 
   constructor(private router: Router) { }
@@ -23,38 +23,33 @@ export class PartBComponent implements OnInit {
     this.router.navigate(["part-b"])
   }
 
-  convertFromKG(input: number) {
-    this.kilograms = input;
+  convertFromKG() {
     this.stone = this.kilograms * (5 / 32);
     this.pounds = this.kilograms * (141 / 64);
+    
   }
 
-  convertFromStone(input: number) {
-    this.stone = input;
+  convertFromStone() {
     this.kilograms = this.stone / (5 / 32);
     this.pounds = this.stone * 14;
   }
 
-  convertFromPounds(input: number) {
-    this.pounds = input;
+  convertFromPounds() {
     this.kilograms = this.pounds / (141 / 64);
     this.stone = this.pounds / 14;
   }
 
-  convertFromMetres(input: number) {
-    this.metres = input;
+  convertFromMetres() {
     this.inches = this.metres * (315 / 8);
     this.feet = this.inches / 12; 
   }
 
-  convertFromInches(input: number) {
-    this.inches = input;
+  convertFromInches() {
     this.metres = this.inches / (315 / 8);
     this.feet = this.inches / 12;
   }
 
-  convertFromFeet(input: number) {
-    this.feet = input;
+  convertFromFeet() {
     this.inches = this.feet * 12;
     this.metres = this.inches / (315 / 8);
   }

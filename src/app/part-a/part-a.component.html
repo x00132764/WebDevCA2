@@ -7,11 +7,11 @@
 </p>
 
 <p>
-    c to f <input #inputc (keyup)="convertC(inputc.value)" id="celsius" type="number"/> {{farenheit}}<br/>
+    c to f <input [(ngModel)]="celsius" (keyup)="convertC()" id="celsius" type="number" placeholder="celsius"/>
 </p>
 
 <p>
-    f to c <input #inputf (keyup)="convertF(inputf.value)" id="farenheit" type="number"/> {{celsius}}<br/>
+    f to c <input [(ngModel)]="farenheit" (keyup)="convertF()" id="farenheit" type="number" placeholder="farenheit"/>
 </p>
 
 <p>number of conversions: </p><p>{{count}}</p>

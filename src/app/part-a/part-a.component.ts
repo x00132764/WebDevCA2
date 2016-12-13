@@ -9,8 +9,8 @@ import { Router } from "@angular/router";
 export class PartAComponent implements OnInit {
 
   count: number = 0;
-  celsius: number = 0;
-  farenheit: number = 0;
+  celsius: number = null;
+  farenheit: number = null;
 
   constructor(private router: Router) { }
 
@@ -20,14 +20,14 @@ export class PartAComponent implements OnInit {
     this.router.navigate(["part-b"])
   }
 
-  convertC(input: number) {
-    this.farenheit = (input * (9 / 5)) + 32;
+  convertC() {
+    this.farenheit = (this.celsius * (9 / 5)) + 32;
     this.count++
   }
 
-  convertF(input: number)
+  convertF()
  {
-   this.celsius = (input - 32) * (5/9);
+   this.celsius = (this.farenheit - 32) * (5/9);
    this.count++;
  }
 
