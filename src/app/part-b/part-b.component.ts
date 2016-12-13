@@ -17,12 +17,6 @@ export class PartBComponent implements OnInit {
   bmi: number = 0;
   range: string = "";
 
-  //constructor(private location: Location) { }
-
-  /*goBack() {
-    this.location.back();
-  }*/
-
   constructor(private router: Router) { }
 
   navigate() {
@@ -30,32 +24,38 @@ export class PartBComponent implements OnInit {
   }
 
   convertFromKG(input: number) {
-    this.stone = input * (5 / 32);
-    this.pounds = input * (141 / 64);
+    this.kilograms = input;
+    this.stone = this.kilograms * (5 / 32);
+    this.pounds = this.kilograms * (141 / 64);
   }
 
   convertFromStone(input: number) {
-    this.kilograms = input / (5 / 32);
-    this.pounds = input * 14;
+    this.stone = input;
+    this.kilograms = this.stone / (5 / 32);
+    this.pounds = this.stone * 14;
   }
 
   convertFromPounds(input: number) {
-    this.kilograms = input / (141 / 64);
-    this.stone = input / 14;
+    this.pounds = input;
+    this.kilograms = this.pounds / (141 / 64);
+    this.stone = this.pounds / 14;
   }
 
   convertFromMetres(input: number) {
-    this.inches = input * (315 / 8);
+    this.metres = input;
+    this.inches = this.metres * (315 / 8);
     this.feet = this.inches / 12; 
   }
 
   convertFromInches(input: number) {
-    this.metres = input / (315 / 8);
-    this.feet = input / 12;
+    this.inches = input;
+    this.metres = this.inches / (315 / 8);
+    this.feet = this.inches / 12;
   }
 
   convertFromFeet(input: number) {
-    this.inches = input * 12;
+    this.feet = input;
+    this.inches = this.feet * 12;
     this.metres = this.inches / (315 / 8);
   }
 

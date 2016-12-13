@@ -6,24 +6,24 @@
 
 <p>enter your weight</p>
 <p>
-    stone <input #inputStone id="stone" type="number" placeholder="enter a number" />
+    stone <input #inputStone (keyup)="convertFromStone(inputStone.value)" id="stone" type="number" placeholder="enter a number" /> {{stone}}
 </p>
 <p>
-    pounds <input #inputLbs  id="pounds" type="number" placeholder="enter a number" />
+    pounds <input #inputLbs (keyup)="convertFromPounds(inputLbs.value)" id="pounds" type="number" placeholder="enter a number" /> {{pounds}}
 </p>
 <p>
-    KGs <input #inputKG  id="kilograms" type="number" placeholder="enter a number" />
+    KGs <input #inputKG (keyup)="convertFromKG(inputKG.value)" id="kilograms" type="number" placeholder="enter a number" /> {{kilograms}}
 </p>
 
 <p>enter your height</p>
 <p>
-    feet <input #inputFeet  id="feet" type="number" placeholder="enter a number" />
+    feet <input #inputFeet (keyup)="convertFromFeet(inputFeet.value)" id="feet" type="number" placeholder="enter a number" /> {{feet}}
 </p>
 <p>
-    inches <input #inputInches  id="inches" type="number" placeholder="enter a number" />
+    inches <input #inputInches (keyup)="convertFromInches(inputInches.value)" id="inches" type="number" placeholder="enter a number" /> {{inches}}
 </p>
 <p>
-    metres <input #inputMetres  id="metres" type="number" placeholder="enter a number" />
+    metres <input #inputMetres (keyup)="convertFromMetres(inputMetres.value)" id="metres" type="number" placeholder="enter a number" /> {{metres}}
 </p>
 
 <p>
@@ -35,17 +35,17 @@
 
 
 <!--
-(keyup)="convertFromStone(#inputStone.value)"
+(keyup)="convertFromStone(inputStone.value)"
 
-(keyup)="convertFromPounds(#inputLbs.value)"
+(keyup)="convertFromPounds(inputLbs.value)"
 
-(keyup)="convertFromKG(#inputKG.value)"
+(keyup)="convertFromKG(inputKG.value)"
 
-(keyup)="convertFromFeet(#inputFeet.value)"
+(keyup)="convertFromFeet(inputFeet.value)"
 
-(keyup)="convertFromInches(#inputInches.value)"
+(keyup)="convertFromInches(inputInches.value)"
 
-(keyup)="convertFromMetres(#inputMetres.value)"
+(keyup)="convertFromMetres(inputMetres.value)"
 
  (click)="calcBMI()" 
  -->
