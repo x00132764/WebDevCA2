@@ -1,28 +1,26 @@
-<p>
-   <a [routerLink]="['/']">Part A</a>
-</p>
+
 
 <p>BMI calculator</p>
 
 <p>enter your weight</p>
 <p>
-    stone <input [(ngModel)] ="stone" (keyup)="convertFromStone()" id="stone" type="number" placeholder="stone" /> 
+    <input [(ngModel)] ="stone" (keyup)="convertFromStone()" id="stone" type="number" placeholder="stone" /> 
 </p>
 <p>
-    pounds <input [(ngModel)]="pounds" (keyup)="convertFromPounds()" id="pounds" type="number" placeholder="pounds" /> 
+    <input [(ngModel)]="pounds" (keyup)="convertFromPounds()" id="pounds" type="number" placeholder="pounds" /> 
 <p>
-    KGs <input [(ngModel)]="kilograms" (keyup)="convertFromKG()" id="kilograms" type="number" placeholder="kilograms" />
+    <input [(ngModel)]="kilograms" (keyup)="convertFromKG()" id="kilograms" type="number" placeholder="kilograms" />
 </p>
 
 <p>enter your height</p>
 <p>
-    feet <input [(ngModel)]="feet" (keyup)="convertFromFeet()" id="feet" type="number" placeholder="feet" />}}
+    <input [(ngModel)]="feet" (keyup)="convertFromFeet()" id="feet" type="number" placeholder="feet" />}}
 </p>
 <p>
-    inches <input [(ngModel)]="inches" (keyup)="convertFromInches()" id="inches" type="number" placeholder="inches" />
+    <input [(ngModel)]="inches" (keyup)="convertFromInches()" id="inches" type="number" placeholder="inches" />
 </p>
 <p>
-    metres <input [(ngModel)]="metres" (keyup)="convertFromMetres()" id="metres" type="number" placeholder="metres" />
+    <input [(ngModel)]="metres" (keyup)="convertFromMetres()" id="metres" type="number" placeholder="metres" />
 </p>
 
 <p>
@@ -33,18 +31,3 @@
 <p>your estimated BMI is {{bmi}}, this is in the {{range}}</p>
 
 
-<!--
-(keyup)="convertFromStone(inputStone.value)"
-
-(keyup)="convertFromPounds(inputLbs.value)"
-
-(keyup)="convertFromKG(inputKG.value)"
-
-(keyup)="convertFromFeet(inputFeet.value)"
-
-(keyup)="convertFromInches(inputInches.value)"
-
-(keyup)="convertFromMetres(inputMetres.value)"
-
- (click)="calcBMI()" 
- -->

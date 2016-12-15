@@ -8,6 +8,7 @@ import { ConvertComponent } from './convert/convert.component';
 import { PartAComponent } from './part-a/part-a.component';
 import { PartBComponent } from './part-b/part-b.component';
 import { RouterModule } from "@angular/router";
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RouterModule } from "@angular/router";
     ...AppComponents,
     ConvertComponent,
     PartAComponent,
-    PartBComponent
+    PartBComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

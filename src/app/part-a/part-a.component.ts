@@ -16,8 +16,17 @@ export class PartAComponent implements OnInit {
 
   
 
-  navigate() {
-    this.router.navigate(["part-b"])
+  navigate(selection: string) {
+    if (selection == "partb") {
+      this.router.navigate(['page2']);
+    }
+    if (selection == "") {
+      this.router.navigate(['homepage']);
+    }
+
+    if (selection == "parta") {
+      this.router.navigate(['page1']);
+    }
   }
 
   convertC() {

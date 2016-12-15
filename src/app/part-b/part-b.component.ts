@@ -20,7 +20,7 @@ export class PartBComponent implements OnInit {
   constructor(private router: Router) { }
 
   navigate() {
-    this.router.navigate(["part-b"])
+    this.router.navigate(["part-a"])
   }
 
   convertFromKG() {
